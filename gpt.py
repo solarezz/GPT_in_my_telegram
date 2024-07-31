@@ -11,9 +11,6 @@ api_hash = '85bd96f12b78d9140335ca52ce75120a'
 client = TelegramClient('gpt_from_my_tg', api_id, api_hash)
 
 
-@client.on(events.NewMessage)
-async def handler(event):
-    print(f'Новое сообщение: {event.raw_text}')
 
 @client.on(events.NewMessage(pattern='/gpt (.+)'))
 async def gpt_command(event):
@@ -26,8 +23,6 @@ async def gpt_command(event):
 async def main():
     await client.start()
     print('Client started. GO!')
-
-    #await client.send_message('me', 'Тестовое сообщение')
 
     await client.run_until_disconnected()
 
