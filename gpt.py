@@ -2,11 +2,11 @@ import asyncio
 from telethon import TelegramClient, events
 from yandexgptlite import YandexGPTLite
 
-account = YandexGPTLite('b1gck5hl5v4ktgcnlv3m', 'y0_AgAAAABziHH_AATuwQAAAAEMA-UkAACDH9ws6mdEYL9rQubGdlGGpIe4xw' )
+account = YandexGPTLite()
 
 
-api_id = 23966203
-api_hash = '85bd96f12b78d9140335ca52ce75120a'
+api_id = 1234567
+api_hash = ''
 
 client = TelegramClient('gpt_from_my_tg', api_id, api_hash)
 
